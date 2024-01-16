@@ -1,0 +1,98 @@
+body {
+    width: 96%;
+    margin: 10px;
+}
+
+#result {
+    text-align: center;
+    color: rgb(68, 89, 117);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#tableContainer {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#dataTable {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#dataTable tr {
+    height: 30px;
+}
+
+#dataTable tr:nth-child(1) {
+    background-color: rgb(68, 89, 117);
+    /* background-color: red; */
+    color: white;
+}
+
+#dataTable th, #dataTable td {
+    border: 1px solid #ddd;
+}
+
+#dataTable th:nth-child(1) {
+    width: 10%;
+}
+
+#dataTable th:nth-child(2) {
+    width: 10%;
+}
+
+#dataTable th:nth-child(3) {
+    width: 10%;
+}
+
+#dataTable th:nth-child(4) {
+    width: 15%;
+}
+
+#dataTable th:nth-child(5) {
+    width: 15%;
+}
+
+#dataTable th:nth-child(6) {
+    width: 15%;
+}
+
+#dataTable th:nth-child(7) {
+    width: 15%;
+}
+
+#dataTable td:nth-child(6), #dataTable td:nth-child(7) {
+    font-size: 12px;
+}
+
+#starFill {
+    color: #FF9900;
+}
+
+#satrNull {
+    color: rgb(186, 182, 182);
+}
+
+#graph {
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+/* #ageGraph {
+    margin-top: 5%;
+    width: 30%;
+    height: 30%;
+} */

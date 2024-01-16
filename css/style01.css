@@ -1,0 +1,136 @@
+body {
+    margin: 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; */
+}
+
+#survey {
+    text-align: center;
+    color: rgb(68, 89, 117);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#form table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    /* テーブルサイズ調整のためのfixed */
+    table-layout: fixed;
+}
+
+#form tr {
+    height: 60px;
+}
+
+#form tr:nth-child(1) {
+    height: 40px;
+    background-color: rgb(68, 89, 117);
+    /* background-color: red; */
+    color: white;
+}
+
+#form td {
+    padding: 1%;
+}
+
+#form th, #form td {
+    border: 1px solid #ddd;
+}
+
+#form th:nth-child(1) {
+    width: 10%;
+    border-left: none;
+}
+
+#form th:nth-child(2) {
+    width: 50%;
+}
+
+#form th:nth-child(3) {
+    width: 40%;
+    border-right: none;
+}
+
+#form td:nth-child(1) {
+    text-align: center;
+    border-left: none;
+}
+
+#form td:nth-child(3) {
+    border-right: none;
+}
+
+#form input, #form select {
+    width: 100%;
+    height: 30px;
+}
+
+#starRate {
+    display: flex;
+    justify-content: flex-end;
+    color: #FF9900;
+    font-size: 24px;
+    align-items: center;
+    /* row-reverseとすることで星の並びを左から順にする */
+    flex-direction: row-reverse;
+}
+
+#starRate input[type="radio"] {
+    display: none;
+}
+
+#starRate label {
+    cursor: pointer;
+    margin-left: 6%;
+    position: relative;
+}
+
+/* 選択する前の星の設定 */
+/* 元々の星と重なるように、position relativeとabsoluteで設定 */
+#starRate label::before {
+    /* "\2606"は空の星 */
+    content: "\2606";
+    position: absolute;
+    color: rgb(186, 182, 182);
+    top: 0;
+    left: 0;
+}
+
+/* 星を選択すると、その先にある選択していない星(label)も塗りつぶしの星にする */
+/* 前段でrow-reverseを設定しておくことで、選択した星の手前の星が塗りつぶされるようになっている */
+#starRate input[type="radio"]:checked ~ label::before {
+    content: "\2605";
+    color: #FF9900;
+}
+
+#form #send {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+
+#form #send:enabled:hover {
+    background-color: #2589d0;
+    color: white;
+}
+
+#caution {
+    font-size: 12px;
+    color: #898383;
+    text-align: center;
+}
